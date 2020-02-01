@@ -1,0 +1,297 @@
+1, 2>
+sudo apt update
+sudo apt-get upgrade
+
+3>
+sudo apt-get install tree
+============
+# install pip3  #
+sudo apt update
+sudo apt install python3-pip
+pip3 --version
+=========================
+
+https://askubuntu.com/questions/958303/unable-to-create-virtual-environment-with-python-3-6
+
+https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-programming-environment-on-ubuntu-18-04-quickstart
+
+
+----List all owner----
+less /etc/passwd
+
+----change owner to apache----
+sudo chown -R  www-data folder-name
+
+
+
+
+##########   envirionment   ###########
+
+1>
+sudo apt install python3.7-venv
+
+or
+sudo apt-get install python3-venv
+
+#create an envirionment 
+1>
+python3 -m venv   myenv
+
+
+
+
+=========================
+pwd
+/var/www/html/mydjango_project
+ll
+total 12
+drwxrwxrwx 3 debasis debasis 4096 Dec  8 14:36 ./
+drwxr-xr-x 7 debasis debasis 4096 Dec  8 14:11 ../
+drwxr-xr-x 6 debasis debasis 4096 Dec  8 14:36 myenv/
+=========================
+
+####### Activate the environment  , here  "myenv"  #######
+1>
+source myenv/bin/activate
+
+=========================
+debasis@debasis-H310M-H:/var/www/html/mydjango_project$ source env/bin/activate
+(myenv) debasis@debasis-H310M-H:/var/www/html/mydjango_project$ 
+
+=========================
+1>
+pip3  list
+2>
+pip3  freeze
+3>
+pip3  install pytz
+4>
+pip3  install requests
+
+=========================
++++++++++++++++++++++++++
+
+#  starting Django project now !   
+1>
+pip3 install django
+2>
+python3 -m django --version
+3>
+django-admin
+4>
+django-admin startproject django_blog_project
+cd django_blog_project
+
+######Start Server#######
+1>
+python3 manage.py runserver
+or>
+python3 manage.py runserver 8080
+or>
+python3 manage.py runserver 0.0.0.0:8000
+
+#########   Create An App  ############
+1>
+python3 manage.py  startapp blog 
+
+@ main apps settings.py   add
+INSTALLED_APPS = [
+    'blog.apps.BlogConfig', # new
+   ...
+]
+
+=========================
+#####static files#######
+####  project root -> blog -> static -> blog
+###   template files
+##    project root -> blog -> templates -> blog
+
+=========================
+####### Create admin user  ############
+1>
+python3 manage.py migrate 
+#(  for the first time )
+
+python3 manage.py makemigrations  
+#(  if migration files/modules is already exists )
+2>
+python3 manage.py createsuperuser
+
+username: debasiskool
+email: debasiskool@gmail.com
+email: testing321
+
+==========================
+##### Migration #####
+1>
+python3 manage.py makemigrations
+
+----
+Migrations for 'blog':
+  blog/migrations/0001_initial.py
+    - Create model Post
+----
+###  to see the sql ###
+
+### python3 manage.py sqlmigrate blog(app name) 0001( migration number)
+
+2>
+python3 manage.py sqlmigrate blog  0001
+
+3>
+python3 manage.py migrate
+===============
+######## Django Python Shell #########
+1>
+python3 manage.py shell
+
+2>  >>>
+i)
+from blog.models import Post
+ii)
+from django.contrib.auth.models import User
+iii)
+User.objects.all()  ,   User.objects.first()  ,  User.objects.last()
+
+User.objects.filter(username="debasiskool")
+>>> user = User.objects.filter(username="debasiskool").first()
+>>> user
+<User: debasiskool>
+>>> user.id
+1
+>>> user.pk
+1
+>>> 
+
+
+>>> user
+<User: debasiskool>
+>>> post_1 = Post(title="Blog 1", content="First Post Content!", author=user)
+>>> Post.objects.all()
+<QuerySet []>
+>>> post_1.save()
+>>> Post.objects.all()
+<QuerySet [<Post: Post object (1)>]>
+>>> 
+
+>>> post_2 = Post(title="Blog 2", content="Second Post Content!", author=user)
+>>> post_2.save()
+>>>  
+
+##  using .modelname_set  ##
+
+user.post_set.all()
+
+user.post_set.create(title='Blog 3', content='Third Post Content!', )
+
+
+====================
+# date filter at template
+# https://docs.djangoproject.com/en/3.0/ref/templates/builtins/
+
+
+====================
+# pillow installing
+python3 -m pip3 install Pillow
+
+@ settings.py
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+
+
+====================
+###  files upload ###
+
+https://docs.djangoproject.com/en/3.0/howto/static-files/
+
+
+=====================
+####  Boto3  AWS Storage  #####
+
+
+pip3 install boto3
+
+pip3 install django-storages
+
+
+
+=================AWS S3=================
+Cross-Origin Resource Sharing (CORS)
+(cors-config)
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+   <CORSRule>
+        <AllowedOrigin>*</AllowedOrigin>
+        <AllowedMethod>GET</AllowedMethod>
+        <AllowedMethod>POST</AllowedMethod>
+        <AllowedMethod>PUT</AllowedMethod>
+        <AllowedHeader>*</AllowedHeader>
+    </CORSRule>
+</CORSConfiguration>
+
+
+
+
+According to http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region, there are 8 Regions that support v2 and v4:
+
+
+US East (Virginia Only)
+US West (Oregon)
+US West ( N. California)
+Asia Pacific (Singapore)
+Asia Pacific (Sydney)
+Asia Pacific (Tokyo)
+EU (Ireland Only)
+South America (São Paulo)
+
+
+
+
+
+
+
+#########  in the end  ########
+pip3 freeze | tee requirements.txt
+
+# copy to server desktop  #
+cd ..
+scp -r django_blog_project debasisnth@111.111.111.111:~/
+
+# install all pip requirement at a time  #
+pip3 install -r requirements.txt
+
+
+
+#+++ goto server_settings_inception.txt  +++#
+
+### collecting static file in production/server ###
+
+python3 manage.py collectstatic
+
+
+
+=================
+Follow these steps to project to Github
+1) git init
+2) git add .
+3) git commit -m "Add all my files"
+4) git remote add origin https://github.com/debasisnth/django_blog_project.git
+
+Upload of project from scratch require git pull origin master.
+
+5) 
+git fetch --all
+#Then, you have two options:
+
+git reset --hard origin/master
+#OR If you are on some other branch:
+
+git reset --hard origin/<branch_name>
+
+6) git push --force origin master
+7) git clone  https://github.com/debasisnth/django_blog_project.git
+
+===============
