@@ -1,0 +1,204 @@
+---- ssh  ----
+ssh  -i  ~/.ssh/debasiskool-001.pem ubuntu@ec2-3-86-177-26.compute-1.amazonaws.com
+ssh  -i  ~/.ssh/debasiskool-001.pem ubuntu@ec2-3-86-177-26.compute-1.amazonaws.com  -t "cd /var/www/html/v6 && bash" 
+
+---- scp eg:  ----
+scp -i myAmazonKey.pem phpMyAdmin-3.4.5-all-languages.tar.gz ec2-user@mec2-50-17-16-67.compute-1.amazonaws.com:~/.
+
+---- to my-aws   upload----
+scp -i  ~/.ssh/debasiskool-001.pem  -r ./testcre ubuntu@ec2-3-86-177-26.compute-1.amazonaws.com:/var/www/html/v1
+
+---- to my-aws   download----
+scp -i  ~/.ssh/debasiskool-001.pem  -r  ubuntu@ec2-3-86-177-26.compute-1.amazonaws.com:/var/www/html/v1/testcre   ~/Desktop
+
+scp -i  ~/.ssh/debasiskool-001.pem  -r  ubuntu@ec2-3-86-177-26.compute-1.amazonaws.com:/etc/apache2/sites-available/django_project.conf   ~/Desktop
+
+---- List all owner ----
+less /etc/passwd
+
+----change owner to apache----
+sudo chown -R  username folder-name
+
+---- virtull eve----
+
+1>
+sudo apt-get install python3-venv
+
+#create an envirionment 
+2>
+python3 -m venv   myenv
+
+source myenv/bin/activate
+
+deactivate
+
+
+
+---- install all pip requirement at a time  ----
+pip3 install -r requirements.txt
+
+
+---- collecting static file in production/server ----  VVI
+
+python3 manage.py collectstatic
+
+
+
+---- host ----
+hostname
+
+sudo nano /etc/hosts
+or
+sudo vim /etc/hosts
+
+
+
+
+
+
+
+------  Uncomplicated FireWall ------
+sudo ufw status
+
+sudo ufw allow ssh
+
+sudo ufw default allow outgoing
+
+sudo ufw allow 8000 
+
+sudo ufw allow https
+sudo ufw allow http
+
+## please run inthe end ##
+
+sudo ufw enable
+
+
+---- ssh  ----
+sudo systemctl restart ssh
+
+cd /var/www/html
+cd /var/www/html/v1
+cd /var/www/html/v1/dj
+
+
+----  WSGI ----
+
+sudo apt-get install libapache2-mod-wsgi-py3
+#sudo apt-get install libapache2-mod-wsgi
+sudo a2enmod wsgi
+sudo service apache2 restart
+
+
+----  WISGI setup for Apache2 in  django-project.conf  at /etc/apache2/sites-available/ ----
+
+https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/modwsgi/
+
+
+apache2 -v
+
+
+cd /etc/apache2/sites-available/
+
+sudo cp 000-default.conf  django_project.conf
+
+
+----  See django_project.conf_sample  ----
+
+sudo nano /etc/apache2/sites-available/django_project.conf
+
+or
+
+sudo vim /etc/apache2/sites-available/django_project.conf
+
+https://github.com/CoreyMSchafer/code_snippets/tree/master/Django_Blog/snippets
+
+
+
+
+Alias /favicon.ico /path/to/mysite.com/static/favicon.ico
+Alias /favicon.ico /var/www/html/v1/dj/django_blog_project/static/blog/favicon.ico
+
+/var/www/html/v1/dj/django_blog_project/static/blog/
+
+
+WSGIScriptAlias / /path/to/mysite.com/mysite/wsgi.py
+WSGIPythonHome /path/to/venv
+WSGIPythonPath /path/to/mysite.com
+
+WSGIDaemonProcess example.com python-home=/path/to/venv python-path=/path/to/mysite.com
+WSGIProcessGroup example.com
+
+<Directory /path/to/mysite.com/mysite>
+<Files wsgi.py>
+Require all granted
+</Files>
+</Directory>
+
+
+
+
+---- Enable the site through Apache2 ----
+sudo a2ensite django_project.conf 
+
+---- disable the default site ----
+
+sudo a2dissite 000-default.conf
+
+
+---- Permission Apache to write the sqlite db ----
+
+sudo chown  :www-data  django_blog_project/db.sqlite3
+sudo chmod  664  django_blog_project/db.sqlite3
+
+sudo chown :www-data django_blog_project/
+sudo chown -R :www-data django_blog_project/media
+sudo chmod  775  django_blog_project/media
+
+
+
+ll
+
+
+sudo service apache2 restart
+
+
+
+
+----  HTTPS not foe ec2 ----
+https://certbot.eff.org/
+
+https://letsencrypt.org/getting-started/
+
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository universe
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install python-certbot-apache
+
+sudo certbot --apache
+
+sudo certbot renew --dry-run
+
+
+
+----  add domain name ----
+sudo nano /etc/apache2/sites-available/django_project.conf
+
+ServerName  www.asdfghhkl.com
+
+
+ comment WSGI 
+
+sudo certbot --apache
+
+***-ssl-le.conf file will be created
+
+uncomment  WSGI at  ****-ssl-le.conf
+
+
+
+using AWS Certificate Manager 
+
+---- END ----

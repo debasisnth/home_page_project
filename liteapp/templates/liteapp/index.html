@@ -1,11 +1,132 @@
+
+
 {% extends "liteapp/base.html" %}
+
+{% load static %}
 
 {% block content %}
 
+	<div class="intro-section" id="home-section">
+	  <div class="container">
+	    <div class="row align-items-center">
+	      <div class="col-lg-4 mr-auto" data-aos="fade-up">
+	        <h1>Welcome to my profile</h1>
+	        <p class="mb-5">Hi, I'm Debasis Nath, I am a Django, Core PHP, Symfony Developer and AWS consultant. You can take a view some of my test web apps below</a>. </p>
+	        <!-- <p><a href="#" class="btn btn-outline-light py-3 px-5">Get Started</a></p> -->
+
+	      </div>
+	      <div class="col-lg-2 ml-auto"  data-aos="fade-up" data-aos-delay="100">
+	      	<ul class="contact-details">
+	            <li>
+	            Phone: +919830699062,
+	            </li>
+	            <li>
+	            	 E-mail: debasisloo@gmail.com
+	            </li>
+            </ul>
+	        <figure class="img-absolute">
+	          <!-- <img src="images/person_1.jpg" alt="Image" class="img-fluid">  -->
+	          <img src="{% static 'liteapp/images/debasis_nath_2.jpg' %}" alt="Image" class="img-fluid">
+	        </figure>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- <div class="site-section section-1"></div> -->
+
+	<!-- <div class="site-section section-2" id="work-section"></div> -->
+
+	<!-- <div class="site-section section-2" id="process-section" ></div> -->
+
+	<!--
+	<div class="site-section bg-light" id="services-section">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-md-12 mb-2">
+	        <span class="section-sub-title d-block">Services</span>
+	        <h2 class="section-title">Services</h2>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus distinctio ex. Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	-->
 
 
-<h1>Hello There! </h1>
+	<div class="site-section bg-light" id="work-section">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-md-12 mb-2">
+	        
+	        <h2 class="section-title">Web Works</h2>
 
-<p>This is Debasis Nath, Welcome to my profile!</p>
+	        <p data-aos="flip-left">All projects has been configured on my AWS EC2 instance: <a href="#"> django-blog web app </a>, ...  </p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="site-section" id="contact-section">
+	  <div class="container">
+
+	  	<!-- justify-content-center -->
+	    <div class="row justify-content-center"> 
+
+	      <div class="col-md-12">
+
+
+	        
+	        <h2 class="section-title mb-3">Message Here</h2>
+	        <p class="mb-5">Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.</p>
+	      
+	        <form method="post" data-aos="fade-up" data-aos-duration="3000">
+	          <div class="form-group row">
+	            <div class="col-md-6 mb-3 mb-lg-0">
+	              <input type="text" class="form-control" placeholder="First name">
+	            </div>
+	            <div class="col-md-6">
+	              <input type="text" class="form-control" placeholder="Last name">
+	            </div>
+	          </div>
+
+	          <div class="form-group row">
+	            <div class="col-md-12">
+	              <input type="text" class="form-control" placeholder="Subject">
+	            </div>
+	          </div>
+
+	          <div class="form-group row">
+	            <div class="col-md-12">
+	              <input type="email" class="form-control" placeholder="Email">
+	            </div>
+	          </div>
+	          <div class="form-group row">
+	            <div class="col-md-12">
+	              <textarea name="mail-message" class="form-control" id="mail-message" cols="30" rows="10" placeholder="Write your message here."></textarea>
+	            </div>
+	          </div>
+
+	          <div class="form-group row">
+	            <div class="col-md-6">
+	              
+	              <input type="submit" class="btn btn-primary py-3 px-5 btn-block" value="Send Message">
+	            </div>
+	          </div>
+
+
+	        </form>
+
+
+
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 
 {% endblock content %}
+{% block javascript %}
+
+
+{% endblock javascript %}
