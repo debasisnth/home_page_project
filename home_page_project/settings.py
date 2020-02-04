@@ -129,7 +129,7 @@ USE_TZ = True
 
 
 
-# Static files (CSS, JavaScript, Images)
+#herohu related
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 

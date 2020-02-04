@@ -46,7 +46,7 @@ heroku config:set DISABLE_COLLECTSTATIC=1
 
 web: gunicorn app:app --log-file=-
 
-
+#https://devcenter.heroku.com/articles/django-assets
 
 
 git push heroku master
