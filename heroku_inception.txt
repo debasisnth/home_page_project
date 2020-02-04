@@ -49,10 +49,14 @@ web: gunicorn app:app --log-file=-
 #https://devcenter.heroku.com/articles/django-assets
 
 
-git push heroku master
+
+$ git add .
+$ git commit -am "hh 12" 
+$ git push heroku master
 
 
 heroku run bash
 
 heroku run python3 manage.py migrate
 heroku run python3 manage.py createsuperuser
+
