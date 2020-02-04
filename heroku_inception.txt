@@ -1,0 +1,58 @@
+heroku
+
+Install the Heroku CLI
+
+$ heroku login
+$ git init
+$ heroku git:remote -a polar-waters-10676
+Deploy your application
+Commit your code to the repository and deploy it to Heroku using Git.
+
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master
+Existing Git repository
+For existing repositories, simply add the heroku remote
+
+$ heroku git:remote -a polar-waters-10676 
+
+---- Procfile ----
+vim Procfile
+web: gunicorn project_name.wsgi
+
+pip3 install gunicorn
+
+git add .
+git commit -m ' commit string'
+
+heroku login
+
+
+#Creating app...
+
+heroku  create
+
+#done, ⬢ polar-waters-10676
+#https://polar-waters-10676.herokuapp.com/ | https://git.heroku.com/polar-waters-10676.git
+
+
+heroku git:remote -a polar-waters-10676 
+
+
+#set git remote heroku to https://git.heroku.com/polar-waters-10676.git
+
+
+heroku config:set DISABLE_COLLECTSTATIC=1
+
+web: gunicorn app:app --log-file=-
+
+
+
+
+git push heroku master
+
+
+heroku run bash
+
+heroku run python3 manage.py migrate
+heroku run python3 manage.py createsuperuser
