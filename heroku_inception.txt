@@ -49,7 +49,7 @@ heroku git:remote -a polar-waters-10676
 #set git remote heroku to https://git.heroku.com/polar-waters-10676.git
 
 
-heroku config:set DISABLE_COLLECTSTATIC=1
+
 
 web: gunicorn app:app --log-file=-
 
@@ -57,10 +57,11 @@ web: gunicorn app:app --log-file=-
 
 
 
-$ git add .
-$ git commit -am "hh 12" 
-$ git push heroku master
+git add .
+git commit -am "hh 12" 
+git push heroku master
 
+heroku config:set DISABLE_COLLECTSTATIC=1
 
 heroku run bash
 
