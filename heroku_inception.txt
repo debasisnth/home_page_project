@@ -1,4 +1,6 @@
 heroku
+#https://devcenter.heroku.com/articles/django-assets
+
 
 Install the Heroku CLI
 
@@ -22,9 +24,14 @@ web: gunicorn project_name.wsgi
 
 pip3 install gunicorn
 
+pip3 install whitenoise
+
 git add .
 git commit -m ' commit string'
 
+
+
+###################################################
 heroku login
 
 
@@ -46,7 +53,7 @@ heroku config:set DISABLE_COLLECTSTATIC=1
 
 web: gunicorn app:app --log-file=-
 
-#https://devcenter.heroku.com/articles/django-assets
+
 
 
 
