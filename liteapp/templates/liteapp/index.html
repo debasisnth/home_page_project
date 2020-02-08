@@ -2,6 +2,8 @@
 
 {% extends "liteapp/base.html" %}
 
+{% load crispy_forms_tags %}
+
 {% load static %}
 
 {% block content %}
@@ -80,7 +82,7 @@
 	        <h2 class="section-title mb-3">Message Here</h2>
 	        <p class="mb-5">Natus totam voluptatibus animi aspernatur ducimus quas obcaecati mollitia quibusdam temporibus culpa dolore molestias blanditiis consequuntur sunt nisi.</p>
 	      
-	        <form method="post" data-aos="fade-up" data-aos-duration="3000">
+	        <!-- <form method="post" data-aos="fade-up" data-aos-duration="3000">
 	          <div class="form-group row">
 	            <div class="col-md-6 mb-3 mb-lg-0">
 	              <input type="text" class="form-control" placeholder="First name">
@@ -115,6 +117,15 @@
 	          </div>
 
 
+	        </form> -->
+
+
+	        <form method="post"  data-aos="fade-up" data-aos-duration="3000"  class="get-in-touch">
+	            {% csrf_token %}
+	            {{ form|crispy }}
+	            <div class="form-actions">
+	              <button class="btn btn-primary py-3 px-5 btn-block" type="submit">Send</button>
+	            </div>
 	        </form>
 
 

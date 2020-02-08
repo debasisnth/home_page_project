@@ -73,6 +73,18 @@
               <div class="container-fluid">
                 <div class="d-flex align-items-center">
                   <div class="site-logo"><a href="{% url 'liteapp-home' %}">Hello There!</a></div>
+
+
+                  <div class="banner_content  ml-24">
+                      {% if messages %}
+                          {% for message in messages %}
+                              <div class="alert alert-{{ message.tags }}">
+                                  {{ message }}
+                              </div>
+                          {% endfor %}
+                      {% endif %}
+                  </div>
+                 
                   <div>
 
                     <!--
@@ -92,6 +104,9 @@
 
 
                   </div>
+
+
+
                   <div class="ml-auto">
                     <nav class="site-navigation position-relative text-right" role="navigation">
                       <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block">
@@ -106,9 +121,15 @@
             </header>
 
             
-
+            
 
             <div class="index-page">
+
+
+
+
+
+
 
                 {% block content %}
                 {% endblock content %}

@@ -871,10 +871,15 @@ a.web-works {
 }
 
 
-ul.contact-details {
+/*ul.contact-details {
     position: absolute;
     bottom: 300px;
     left: 160px;
+}*/
+ul.contact-details {
+    position: relative;
+    bottom: 357px;
+    left: -21px;
 }
 @media only screen and (max-width: 600px) {
   ul.contact-details {
@@ -884,3 +889,5 @@ ul.contact-details {
     left: 6px;
   }
 }
+
+.ml-24{margin-left: 24px;}
