@@ -90,6 +90,11 @@ python3 manage.py runserver 8080
 or>
 python3 manage.py runserver 0.0.0.0:8000
 
+
+####using gunicorn####
+
+gunicorn home_page_project.wsgi:application --bind localhost:8080
+
 #########   Create An App  ############
 1>
 python3 manage.py  startapp blog 

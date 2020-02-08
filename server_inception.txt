@@ -1,6 +1,6 @@
 ---- ssh  ----
 ssh  -i  ~/.ssh/debasiskool-001.pem ubuntu@ec2-3-86-177-26.compute-1.amazonaws.com
-ssh  -i  ~/.ssh/debasiskool-001.pem ubuntu@ec2-3-86-177-26.compute-1.amazonaws.com  -t "cd /var/www/html/v6 && bash" 
+ssh  -i  ~/.ssh/debasiskool-001.pem ubuntu@ec2-54-234-230-51.compute-1.amazonaws.com -t "cd /var/www/html/v1/dj && bash" 
 
 ---- scp eg:  ----
 scp -i myAmazonKey.pem phpMyAdmin-3.4.5-all-languages.tar.gz ec2-user@mec2-50-17-16-67.compute-1.amazonaws.com:~/.
