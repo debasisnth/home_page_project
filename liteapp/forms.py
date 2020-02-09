@@ -17,7 +17,7 @@ class ContactForm(forms.Form):
 
 		html_content = f"""
 		<p>
-		{self.cleaned_data['fname']} {self.cleaned_data['lname']} has inquired on : 
+		{self.cleaned_data['fname']} {self.cleaned_data['lname']}({self.cleaned_data['form_email']}) has inquired on : 
 		</p>
 		<span>
 		{self.cleaned_data['subject']}
