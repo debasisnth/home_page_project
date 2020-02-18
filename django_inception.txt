@@ -298,6 +298,9 @@ python3 manage.py collectstatic
 
 
 =================
+git remote rm heroku
+
+
 Follow these steps to project to Github
 1) git init
 2) git add .
