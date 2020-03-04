@@ -71,3 +71,8 @@ python manage.py createsuperuser
 
 python manage.py collectstatic
 
+
+
+done:
+
+https://debasis-nath-profile-page-1266.herokuapp.com/
