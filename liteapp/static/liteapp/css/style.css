@@ -627,17 +627,15 @@ h1, h2, h3, h4, h5,
 .img-absolute {
   position: absolute;
   right: 10%;
-  top: 50%;
+  top: 72%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
+  .img-absolute img {max-width: 600px; box-shadow: 0 10px 30px 12px rgba(30, 25, 15, 0.4); } 
+  @media (max-width: 991.98px) {
   .img-absolute img {
-    max-width: 600px;
-    -webkit-box-shadow: 0 10px 50px -5px rgba(0, 0, 0, 0.4);
-    box-shadow: 0 10px 50px -5px rgba(0, 0, 0, 0.4); }
-    @media (max-width: 991.98px) {
-      .img-absolute img {
-        max-width: 100%; } }
+        max-width: 100%; }
+  }
 
 .site-section {
   padding: 1em 0; }

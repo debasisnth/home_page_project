@@ -13,17 +13,22 @@
 	    <div class="row align-items-center">
 	      <div class="col-lg-4 mr-auto" data-aos="fade-up">
 	        <h1>Welcome to my profile</h1>
-	        <p class="mb-5">Hi, I'm Debasis Nath, I am a Django, Core PHP, Symfony Developer and AWS consultant. You can take a view some of my test web apps links below</a>. </p>
-	        <!-- <p><a href="#" class="btn btn-outline-light py-3 px-5">Get Started</a></p> -->
+	        <p class="mb-5">Hi, I'm Debasis Nath, I am a Django, Core PHP, Symfony Developer and AWS consultant.
+	        I have been working working as a Web developer with 2 years of experience in Core Php, Symfony 2.8, Django. Mysql Javascript jQuery. Have 4 years of experience in technical teaching. I am very much interested in Python Django development. I have done some projects in Django the linkes are updated in mt profile link. Also, I have a good understanding of AWS, Heroku, GIT.
+
+	        In school my favorite subject was Chemistry, If there any project which related to Software development and Chemistry I will dive into it :) 
+	    	</p>
+	        
+	        <p><a class="btn btn-outline-light py-3 px-5" href="{% static 'liteapp/doc/Debasis_Nath_Resume.doc' %}" download >My Resume</a></p>
 
 	      </div>
 	      <div class="col-lg-2 ml-auto"  data-aos="fade-up" data-aos-delay="100">
 	      	<ul class="contact-details">
 	            <li>
-	            Phone: +919830699062,
+	            <span>Phone: <a href="tel:+919830699062">+919830699062</a>, <a href="tel:+918827234375">+918827234375</a></span>
 	            </li>
 	            <li>
-	            	 E-mail: debasisnth@gmail.com
+	            	 E-mail: <a href="mailto:debasiskool@gmail.com">debasiskool@gmail.com</a>
 	            </li>
             </ul>
 	        <figure class="img-absolute">
@@ -47,7 +52,7 @@
 
 	        {% with alpha='http://54.89.11.11' beta='https://debasiskool-djecommerce-test.herokuapp.com'  site3='http://74.207.236.111' %}
 	        
-	        <p data-aos="flip-left"> These are some projects which have been configured on my AWS EC2 instance: 1.<a href="{{ alpha }}/django-blog"  target="_blank" > Django-blog project </a>,  2.<a href="{{ beta }}"  target="_blank" > a simple Django e-commerce site configured on Heroku!</a> ,  3.<a href="{{ site3 }}"  target="_blank">Django Geo location related project on nginx(  development in progress... )</a> <a href="{{ site3 }}/driver.home" target="_blank" >, Driver Section of the same project</a>  </p>
+	        <p data-aos="flip-left"> These are some projects which have been configured on my AWS EC2 instance: 1.<a href="{{ alpha }}/django-blog"  target="_blank" > Django-blog project </a>,  2.<a href="{{ beta }}"  target="_blank" > a simple Django e-commerce site configured on Heroku!</a> ,  3.<a href="{{ site3 }}"  target="_blank">Django Geo location related project on Nginx(  Django ASGI Channel Chat Application integrated, development in progress...  )</a> <a href="{{ site3 }}/driver.home" target="_blank" >, Driver Section of the same project</a>  </p>
 
 	        {% endwith %}
 
