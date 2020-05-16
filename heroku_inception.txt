@@ -6,7 +6,8 @@ Install the Heroku CLI
 
 $ heroku login
 $ git init
-$ heroku git:remote -a polar-waters-10676
+$ heroku git:remote -a YOUR-APP-NAME
+$ heroku git:remote -a debasis-nath-profile-page-1266
 Deploy your application
 Commit your code to the repository and deploy it to Heroku using Git.
 
