@@ -898,11 +898,26 @@ a.web-works {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 768px) {
 p.download-cv{
     padding-top: 90px;
     padding-bottom: 60px;
 }
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+p.download-cv {
+    padding-top: -4px;
+    padding-bottom: 120px;
+}
+}
+
+
+
+
 }
 @media only screen and (max-width: 1024px) {
 #work-section {
@@ -938,7 +953,7 @@ ul.contact-details a:hover {
   ul.contact-details {
     color: #e0f0c9;
     position: absolute;
-    bottom: 180px;
+    bottom: 160px;
     left: 6px;
   }
 }
@@ -958,8 +973,4 @@ ul.contact-details a:hover {
 .contact-details a {color: black; }
 @media only screen and (max-width: 600px) {
   .contact-details a {color: white; }
-}
-
-@media only screen and (max-width: 600px) {
-  
 }
