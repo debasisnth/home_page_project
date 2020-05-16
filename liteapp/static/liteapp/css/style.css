@@ -6,11 +6,11 @@ body {
   font-size: 1.1rem; }
 
 ::-moz-selection {
-  background: #000;
+  background: #45d51d;
   color: #fff; }
 
 ::selection {
-  background: #000;
+  background: #45d51d;
   color: #fff; }
 
 a {
@@ -296,7 +296,7 @@ h1, h2, h3, h4, h5,
 
 .site-navbar {
   margin-bottom: 0px;
-  z-index: 1999;
+  z-index: 9;
   position: absolute;
   width: 100%; }
   .site-navbar .container-fluid {
@@ -610,7 +610,7 @@ h1, h2, h3, h4, h5,
     position: absolute;
     height: 100%;
     width: 70%;
-    background: #007bff;
+    background: #5595b5;
     border-bottom-right-radius: 0px; }
     @media (max-width: 991.98px) {
       .intro-section:before {
@@ -620,8 +620,8 @@ h1, h2, h3, h4, h5,
     font-weight: 900;
     color: #fff; }
   .intro-section p {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 1.1rem;
+    color:  rgba(242, 241, 241, 0.95);
+    font-size: 1.2rem;
     max-width: 400px; }
 
 .img-absolute {
@@ -868,12 +868,34 @@ a.web-works {
     color: #eaeab0;
 }
 
+.ml-24{margin-left: 24px;}
 
 /*ul.contact-details {
     position: absolute;
     bottom: 300px;
     left: 160px;
 }*/
+#work-section a {
+    color: #363677;
+}
+@media only screen and (max-width: 600px) {
+  #work-section a {
+      font-style: italic;
+  }
+}
+
+#work-section a:hover {
+    color: #a434cc;
+    text-decoration: underline;
+    background-color: #cbeacf;
+}
+#work-section b {
+    font-weight: 600;
+    color: #716969;
+}
+#work-section p{
+  color: #0c1d5e;
+}
 ul.contact-details {
     position: relative;
     bottom: 357px;
@@ -881,11 +903,25 @@ ul.contact-details {
 }
 @media only screen and (max-width: 600px) {
   ul.contact-details {
-    color: #f3c68b;
+    color: #e0f0c9;
     position: absolute;
     bottom: 180px;
     left: 6px;
   }
 }
 
-.ml-24{margin-left: 24px;}
+@media only screen and (max-width: 600px) {
+  .intro-section, .intro-section .container .row {
+      height: 191vh;
+      min-height: 900px;
+  }
+}
+
+.contact-details a {color: black; }
+@media only screen and (max-width: 600px) {
+  .contact-details a {color: white; }
+}
+
+@media only screen and (max-width: 600px) {
+  
+}
