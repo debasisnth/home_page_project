@@ -322,3 +322,16 @@ git reset --hard origin/<branch_name>
 7) git clone  https://github.com/debasisnth/django_blog_project.git
 
 ===============
+
+
+pipenv
+
+sudo pip3 install pipenv
+sudo -H pip install -U pipenv
+
+pipenv shell
+
+
+---
+pipenv install
+

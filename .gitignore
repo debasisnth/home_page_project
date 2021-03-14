@@ -106,6 +106,9 @@ media/
 *.pyc
 *.db
 *.pid
+
+Pipfile.lock
+
 # django migrations 
 **/migrations/**
 !**/migrations
