@@ -949,6 +949,9 @@ ul.contact-details a:hover {
     color: #eaeeeb;
 }
 
+form input[type=text], form input[type=email]{border: 1px solid #0b0b0b;}
+form #id_message{border: 1px solid blue;}
+
 @media only screen and (max-width: 600px) {
   ul.contact-details {
     color: #e0f0c9;
