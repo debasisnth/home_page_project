@@ -16,7 +16,7 @@
 					<div class="col-lg-4 mr-auto intro-section-01" data-aos="fade-up">
 								<h1>Welcome to my profile</h1>
 								{{ localize_key }}
-								<p class="mb-2">{{ desc  }}</p>
+								<p class="mb-2">{{ desc | safe  }}</p>
 								
 								<p class="download-cv"><a class="btn btn-outline-light py-3 px-5" href="{% static 'liteapp/doc/Debasis_Nath_Resume.pdf' %}" target="_blank" >Download My Resume</a></p>
 					</div>
@@ -24,7 +24,7 @@
 					<div class="col-lg-2 ml-auto intro-section-02"  data-aos="fade-up" data-aos-delay="100">
 								<ul class="contact-details">
 										<li>
-										<span>Phone: <a href="tel:+919830699062">+919830699062</a> <a href="tel:+918827234375">+918827234375</a></span>
+										<span>Phone: <a href="tel:+918827234375">+918827234375</a></span>
 										</li>
 										<li>
 												 E-mail: <a href="mailto:debasisnth@gmail.com">debasisnth@gmail.com</a>
