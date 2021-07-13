@@ -13,8 +13,8 @@ from django.utils.translation import gettext as _
 def home(request):
 
 	desc=_('''
-	Hi, I'm Debasis Nath, I am a <u>Python-Django</u>, <u>Pandas</u>,  <u>Ionic-Angular</u>, Core PHP, Symfony Developer, Linode Expert and AWS consultant.
-    I have been working working as a Web developer with 3 years of experience in Django, Core Php, Symfony 2.8, Mysql, PostgreSQL, Firebase, Javascript jQuery etc, have 4 years of experience in technical teaching. I am very much interested in Python Django development.
+	Hi, I'm Debasis Nath, I am a <u>Python-Django</u>, <u>Pandas</u>,  <u>Ionic-Angular</u>, <u>AWS( Lambda, S3, EC2, IAM etc..)</u>, <u>Serverless Framework</u>, Core PHP, Symfony Developer, Linode Expert and AWS consultant.
+    I have been working working as a Web developer with 3 years of experience in AWS(Lambda, S3, EC2, IAM etc..), Django, Core Php, Symfony 2.8, Mysql, PostgreSQL, Firebase, Javascript jQuery etc, have 4 years of experience in technical teaching. I am very much interested in Python Django development.
     I have done some projects in Django the linkes are updated in mt profile link. Also, I have a good understanding of <u>AWS</u>, EC2, Heroku, <u>GIT</u>, Docker, <u>Rasp-Berry Pi Projects</u>. 
 	In school my favorite subject was Chemistry, If there any project which is related to Software development and Chemistry I will dive into it :) 
                 
