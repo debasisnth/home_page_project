@@ -20,10 +20,11 @@ def home(request):
 	ownership of any project. Currently I  have 3.5 years of experience in
 	development. I have hands on experience on <u>React</u>  <u>Python</u>,
 	<u>Django</u>, <u>Pandas</u>,  <u>AWS(Lambda, S3, EC2, IAM, Textract,
-	Rekognition etc..)<u/>, <u>Git</>, Core Php, Symfony 2.8, Mysql, PostgreSQL,
+	Rekognition etc..)</u>, <u>Git</u>, Core Php, Symfony 2.8, Mysql, PostgreSQL,
 	Firebase, Java-script, Ionic-Angular, jQuery, etc... I also have  4 years of
 	experience in technical teaching. As well as a good understanding of Heroku, 
-	Docker, <u>Rasp-Berry Pi</u> Projects etc..      
+	Docker, <u>Rasp-Berry Pi</u> Projects etc..
+	<div>I am enthusiastic and  interested  in working on modern Web Projects.</div>      
 	
 
 	''')

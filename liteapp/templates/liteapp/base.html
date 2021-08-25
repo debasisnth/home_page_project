@@ -14,10 +14,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="shortcut icon" type="image/x-icon" href="{% static 'liteapp/favicon.ico' %}"/>
-        
-        
+        {% comment %}
         <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'liteapp/fonts/icomoon/style.css' %}">
+        {% endcomment %}
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+
 
         {# <link rel="stylesheet" href="css/bootstrap.min.css"> #}
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -68,11 +74,11 @@
             -->
             
             
-            <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+            <header class="site-navbar shadow py-4 js-sticky-header site-navbar-target mb-4" role="banner">
               
               <div class="container-fluid">
-                <div class="d-flex align-items-center">
-                  <div class="site-logo"><a href="{% url 'liteapp-home' %}">Hello There!</a></div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="site-logo font-weight-bold"><a href="{% url 'liteapp-home' %}">Hello There!</a></div>
 
 
                   <div class="banner_content  ml-24">
@@ -84,9 +90,15 @@
                           {% endfor %}
                       {% endif %}
                   </div>
-                 
-                  <div>
 
+                  <ul class="contact-details list-unstyled mb-0 small">
+										<li class="d-inline-block mr-3">
+										<span>Phone: <a href="tel:+918827234375">+918827234375</a></span>
+										</li>
+										<li class="d-inline-block">
+												 E-mail: <a href="mailto:debasisnth@gmail.com">debasisnth@gmail.com</a>
+										</li>
+								  </ul>
                     <!--
                     <nav class="site-navigation position-relative text-right" role="navigation">
                       <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
@@ -101,12 +113,7 @@
                     -->
 
 
-
-
-                  </div>
-
-
-
+                  {% comment %}
                   <div class="ml-auto">
                     <nav class="site-navigation position-relative text-right" role="navigation">
                       <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block">
@@ -115,6 +122,7 @@
                     </nav>
                     {# <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a> #}
                   </div>
+                  {% endcomment %}
                 </div>
               </div>
               
