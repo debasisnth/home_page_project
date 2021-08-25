@@ -13,9 +13,22 @@ from django.utils.translation import gettext as _
 def home(request):
 
 	desc=_('''
-	Hi, I'm Debasis Nath, I am a <u>Python-Django</u>, <u>Pandas</u>,  <u>AWS</u>, <u>Serverless Framework</u>, Symfony Developer, Linode Expert and AWS consultant. I have hands on experience in AWS(Lambda, S3, EC2, IAM etc..), Django, Core Php, Symfony 2.8, Mysql, PostgreSQL, Firebase, Java-script, Angular10, jQuery etc. I have 4 years of experience in technical teaching. I am very much interested in AWS, Python, Django related development. I have done some projects in AWS, Python-Django and the links are updated in mt profile link. Also, I have a good understanding of Heroku, <u>GIT</u>, Docker, <u>Rasp-Berry Pi Projects</u>,  </u>Angular-Ionic</u> etc...  In school my favorite subject was Chemistry, If there any project which is related to Software development and Chemistry I will dive into it :)         
 	
+	Hi, I'm Debasis Nath, I am a Full-Stack senior software  Developer/Engineer.
+	I am writing this portfolio not only  to show my love for IT but I want
+	to show my ability to work on architecture related issues and take full
+	ownership of any project. Currently I  have 3.5 years of experience in
+	development. I have hands on experience on <u>React</u>  <u>Python</u>,
+	<u>Django</u>, <u>Pandas</u>,  <u>AWS(Lambda, S3, EC2, IAM, Textract,
+	Rekognition etc..)<u/>, <u>Git</>, Core Php, Symfony 2.8, Mysql, PostgreSQL,
+	Firebase, Java-script, Ionic-Angular, jQuery, etc... I also have  4 years of
+	experience in technical teaching. As well as a good understanding of Heroku, 
+	Docker, <u>Rasp-Berry Pi</u> Projects etc..      
+	
+
 	''')
+
+	desc.replace('\n', ' ')
 
 	alpha='https://era.thestudenthub.co.za/'
 	beta='https://meet.thestudenthub.co.za'
