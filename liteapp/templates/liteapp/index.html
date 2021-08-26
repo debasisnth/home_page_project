@@ -10,6 +10,7 @@
 
 {% block content %}
 
+{{ localize_key }}
 		<div class="intro-section" id="home-section">
 			<div class="px-4">
 				<div class="text-center profile-heading mb-5">
@@ -18,13 +19,9 @@
 				<div class="row align-items-center">
 					<div class="col-6 intro-section-01" data-aos="fade-up">
 						<div class="shadow rounded p-3">
-							{{ localize_key }}
+							
 						<p class="mb-2 text-justify">{{ desc | safe  }}</p>
-						<!-- <p>I am enthusiastic and  interested  in working on modern Web Projects.
-									Thank You.
-
-									🔥🔥🔥🔥</p> -->
-						
+												
 						<p class="download-cv text-center">
 							<a class="btn btn-outline-info py-2 px-4" href="{% static 'liteapp/doc/Debasis_Nath_Resume.pdf' %}" target="_blank" >Download My Resume</a>
 						</p>
@@ -47,102 +44,122 @@
 						<img
 						src = "{% static 'liteapp/images/tech-stack/react-2.svg' %}"
 						alt="React"
+						title="React"
 						style=" height:42px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/logo_lockup_firebase_horizontal.svg' %}"
 						alt="Firebase"
+						title="Firebase"
 						style=" height:36px;  "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/typescriptlang-icon.svg' %}"
 						alt="Typescript"
+						title="Typescript"
 						style=" height:36px;  "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/angular-icon.svg' %}"
 						alt="Angular"
+						title="Angular"
 						style=" height:36px;  "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/reactivex.svg' %}"
 						alt="reactive x"
+						title="Reactive x"
 						style=" height:36px;  "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/python-3.svg' %}"
 						alt="Python"
+						title="Python"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/django-logo-svg-vector.svg' %}"
 						alt="Django"
+						title="Django"
 						style=" height:36px; background: white; "
 						/>
 						
 						<img
 						src = "{% static 'liteapp/images/tech-stack/nodejs-2.svg' %}"
 						alt="Node JS"
+						title="Node JS"
 						style=" height:42px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/serverless-ar21.svg' %}"
 						alt="ServerLess Framework"
+						title="Serverless Framework"
 						style=" height:42px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/linode-1.svg' %}"
 						alt="Linode"
+						title="Linode"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/amazon-s3.svg' %}"
 						alt="Aws S3"
+						title="AWS S3"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/aws-lambda-1.svg' %}"
 						alt="Aws Lambda"
+						title="AWS Lambda"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/aws-dynamodb.svg' %}"
 						alt="dynamodb"
+						title="AWS Dynamodb"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/aws-api-gateway.svg' %}"
 						alt="Api GetWay"
+						title="AWS Api GetWay"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/aws-cognito.svg' %}"
 						alt="cognito"
+						title="AWS Cognito"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/aws-iam.svg' %}"
 						alt="aws-iam"
+						title="AWS IAM"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/aws-ec2.svg' %}"
 						alt="Aws-EC2"
+						title="AWS EC2"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/aws-amplify.svg' %}"
 						alt="AWS Amplify"
+						title="AWS Amplify"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/aws-rokognition.svg' %}"
 						alt="AWS-Rokognition"
+						title="AWS Rekognition"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/amazon-textract.svg' %}"
 						alt="AWS-Textract"
+						title="AWS Textract"
 						style=" height:36px; "
 						/>
 
@@ -150,42 +167,49 @@
 						<img
 						src = "{% static 'liteapp/images/tech-stack/git-scm-icon.svg' %}"
 						alt="Git"
+						title="Git"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/php.svg' %}"
 						alt="PHP"
+						title="PHP"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/symfony.svg' %}"
 						alt="Symfony"
+						title="Symfony"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/mariadb.svg' %}"
 						alt="Mariadb"
+						title="Mariadb"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/mysql-vector.svg' %}"
 						alt="Mysql"
+						title="Mysql"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/ubuntu-4.svg' %}"
 						alt="Ubuntu"
+						title="Ubuntu"
 						style=" height:36px; "
 						/>
 						<img
 						src = "{% static 'liteapp/images/tech-stack/postgresql.svg' %}"
-						alt="dynamodb"
+						alt="PostgreSQL"
 						style=" height:36px; "
 						/>
 
 						<img
 						src = "{% static 'liteapp/images/tech-stack/raspberry-pi.svg' %}"
 						alt="Raspberry Pi"
+						title="Raspberry Pi"
 						style=" height:36px; "
 						/>
 						
@@ -202,7 +226,7 @@
 				<div class="row">
 					<div class="col-md-12 mb-2">
 						
-						<h2 class="section-title">Web Works</h2>
+						<h2 class="section-title">Project Works</h2>
 
 						{{ desc2 |safe  }}
 
