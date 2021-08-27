@@ -43,7 +43,7 @@
 					<div class='mt-2 text-center'>
 						<h4 class='text-dark'>My Tech Stack</h4>
 					</div>
-					<div class="mt-4 container">
+					<div class="mt-4 container platform-logo">
 						<img
 						src = "{% static 'liteapp/images/tech-stack/python-3.svg' %}"
 						alt="Python"
@@ -196,12 +196,12 @@
 			</div>
 		</div>
 
-		<div class="site-section bg-light" id="work-section">
+		<div class="site-section bg-light py-5 text-center" id="work-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 mb-2">
+					<div class="col-12">
 						
-						<h2 class="section-title">Web Works</h2>
+						<h2 class="section-title font-weight-bold mb-3">Web Works</h2>
 
 						{{ desc2 |safe  }}
 
@@ -214,9 +214,9 @@
 			<div class="container">
 
 				<!-- justify-content-center -->
-				<div class="row justify-content-center"> 
+				<div class="row justify-content-center my-5"> 
 
-					<div class="col-md-12  border">
+					<div class="col-12 col-md-7 p-3 rounded shadow">
 
 
 						
@@ -228,7 +228,7 @@
 								{% csrf_token %}
 								{{ form|crispy }}
 								<div class="form-actions">
-									<button class="btn btn-primary py-3 px-5 btn-block" type="submit">Send</button>
+									<button class="btn btn-primary py-2 px-5 btn-block" type="submit">Send</button>
 								</div>
 						</form>
 
