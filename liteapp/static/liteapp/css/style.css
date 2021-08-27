@@ -27,5 +27,5 @@ h1, h2, h3, h4, h5,
 }
 .img-absolute{overflow: hidden;}
 .img-absolute img:hover{transform: scale(1.1);transition: 2s;}
-.platform-logo img{width: 60px; height: auto !important; margin: 0 7px;}
+.platform-logo img{width: 60px; height: auto !important; margin: 1px 12px;}
 
