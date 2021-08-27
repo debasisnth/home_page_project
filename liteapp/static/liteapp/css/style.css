@@ -25,4 +25,7 @@ h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   font-family: 'Roboto Condensed', sans-serif;  
 }
+.img-absolute{overflow: hidden;}
+.img-absolute img:hover{transform: scale(1.1);transition: 2s;}
+.platform-logo img{width: 60px; height: auto !important; margin: 1px 12px;}
 
