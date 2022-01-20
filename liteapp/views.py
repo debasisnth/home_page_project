@@ -14,18 +14,17 @@ def home(request):
 
 	desc=_('''
 	
-	Hi, I'm Debasis Nath, I am a Full-Stack senior software  Developer/Engineer.
-	I am writing this portfolio not only  to show my love for IT but I want
-	to show my ability to work on architecture related issues and take full
-	ownership of any project. Currently I  have 3.5 years of experience in
-	development. I have hands on experience on <u>React</u>  <u>Python</u>,
-	<u>Django</u>, <u>Pandas</u>,  <u>AWS(Lambda, S3, EC2, IAM, Textract,
+	Hi, I'm Debasis Nath, I am a Full-Stack senior software Developer/Engineer.
+	I am writing this portfolio not only to show my love for IT but I want
+	to show my ability to work on architecture related issues and take full
+	ownership of any project. Currently I have 4 years of experience in
+	development.I have hands on experience on <u>React</u> <u>Python</u>, <u>Serverless framework</u>
+	<u>Django</u>, <u>Pandas</u>, <u>AWS(Lambda, S3, EC2, IAM, Textract,
 	Rekognition etc..)</u>, <u>Git</u>, Core Php, Symfony 2.8, Mysql, PostgreSQL,
-	Firebase, Java-script, Ionic-Angular, jQuery, etc... I also have  4 years of
-	experience in technical teaching. As well as a good understanding of Heroku, 
+	Firebase, Java-script, Ionic-Angular, jQuery, etc... I also have 4 years of
+	experience in technical teaching. As well as a good understanding of Heroku,
 	Docker, <u>Rasp-Berry Pi</u> Projects etc..
-	<div>I am enthusiastic and  interested  in working on modern Web Projects.</div>      
-	
+	<div>I am enthusiastic and interested in working on modern Web Projects.</div>	
 
 	''')
 
@@ -39,7 +38,7 @@ def home(request):
 	desc2= _(f'''				
 		<p data-aos="flip-left">
 			These are some projects which have been configured on our AWS EC2 instance: <b>1. </b>
-			<a href="{alpha}"  target="_blank" > {alpha}: Symfony 2 Live Project </a>,
+			<a href="{alpha}"  target="_blank" > {alpha}: Symfony Live Project </a>,
 			<b>2. </b><a href="{beta}"  target="_blank" > {beta}:Jeetsi Meet Server maintained by me</a>,
 			<b>3. </b><a href="{site3}"  target="_blank">{site3}:Python-Django Geo location related Live Project on Nginx(  Django ASGI Channel Chat Application integrated, development in progress...  )</a>
 			<a href="{site3}/driver.home" target="_blank" >, Driver section of the same project</a>
