@@ -19,7 +19,7 @@ def home(request):
 	to show my ability to work on architecture related issues and take full
 	ownership of any project. Currently I have 4 years of experience in
 	development.I have hands on experience on <u>React</u> <u>Python</u>, <u>Serverless framework</u>
-	<u>Django</u>, <u>Pandas</u>, <u>AWS(Lambda, S3, EC2, IAM, Textract,
+	<u>Django</u>, <u>Docker</u>, <u>Pandas</u>, <u>AWS(Lambda, S3, EC2, IAM, Textract,
 	Rekognition etc..)</u>, <u>Git</u>, Core Php, Symfony, Mysql, PostgreSQL,
 	Firebase, Java-script, Ionic-Angular, jQuery, etc... I also have 4 years of
 	experience in technical teaching. As well as a good understanding of Heroku,
