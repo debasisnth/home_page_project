@@ -24,7 +24,7 @@ def home(request):
 	Firebase, Java-script, Ionic-Angular, jQuery, etc... I also have 4 years of
 	experience in technical teaching. As well as a good understanding of Heroku,
 	Docker, <u>Rasp-Berry Pi</u> Projects etc..
-	<div>I am enthusiastic and interested in working on DataScience(Python, databricks) / modern Web Projects / AWS cloud based projects   .</div>	
+	<div>I am enthusiastic and interested in working on DataScience(Python, PySpark, databricks) / modern Web Projects / AWS cloud based projects   .</div>	
 
 	''')
 
