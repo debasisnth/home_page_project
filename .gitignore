@@ -117,7 +117,8 @@ media/
 !**/migrations
 !**/migrations/__init__.py
 
-
+# liteapp/static/liteapp/doc/.~lock.DebasisNath_Resume.odp#
+*~lock*
 
 
 
